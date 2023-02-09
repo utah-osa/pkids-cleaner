@@ -1,24 +1,18 @@
 ################################################################################
+#' Pull Student Allocation Matrix
 #'
-#' LEA ID
-#'@format ## `lea_ids`
-#'A data frame with 41 rows and 14 columns
-#'\describe{
-#'  \item{entity_name}{"Alpine School District"}
-#'  \item{district_code}{"ALPS"}
-#'  ...
-#'  }
+#' @description
+#' For use in Student Allocation
 #'
+#' @details
+#' Load in specific entity's student allocation matrix
+#'
+#' @param lea The LEA code; input in quotes
 #'
 #' @export
-#' # Pull Student Allocation Matrix File
-.pullMatrix <- function(lea) {
-  data(lea_ids)
+pullMatrix <- function(lea) {
   lea_ids %<>% filter(district_code == "lea")
   source(paste0("C:/Users/sdutton/Desktop/SamR/testAllocSource_",lea,".R"))
   View(runMatrix)
  }
-#'
-#' @examples
-#' pullMatrix("BESD")
 

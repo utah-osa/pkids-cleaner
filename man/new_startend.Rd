@@ -2,10 +2,22 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{new_startend}
 \alias{new_startend}
-\title{# FUNCTION TO FIND NEW START AND END DATES FOR FILES THAT ARE DUPLICATED}
+\title{New Start/End}
 \usage{
 new_startend(start, end, n, nth)
 }
+\arguments{
+\item{start}{The start}
+
+\item{end}{The end}
+
+\item{n}{The n}
+
+\item{nth}{The nth}
+}
 \description{
-# FUNCTION TO FIND NEW START AND END DATES FOR FILES THAT ARE DUPLICATED
+new_startend' returns the new start and end dates for duplicated files
+}
+\details{
+This function is used in defining classes in the Statewide Merge process.
 }

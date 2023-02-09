@@ -90,11 +90,16 @@ num_rows <- function(old_file, new_file){
 
 ################################################################################
 
-#' Describe Numeric Variables
+#' Sum of Numeric Variables
 #'
-#'
+#'@details
 #' check summary statistics of numeric variables
-#' @export
+#'
+#' @param old_file The file from the previous year
+#' @param new_file The file from the current year
+#' @param funct The summary function to use, default is mean
+#'
+#'@export
 sum_numvars <- function(old_file, new_file, funct = mean){
 
   old_vars <- old_file %>% group_by(SCHOOL_YEAR) %>% summarise_if(is.numeric, funct, na.rm = TRUE) %>% arrange(SCHOOL_YEAR)

@@ -6,6 +6,9 @@
 \usage{
 get_names(names)
 }
+\arguments{
+\item{names}{A parameter}
+}
 \description{
 Get Names
 }

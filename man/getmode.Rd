@@ -6,6 +6,12 @@
 \usage{
 getmode(v)
 }
+\arguments{
+\item{v}{The column in which we are obtaining a mode value}
+}
 \description{
-# MODE FUNCTION
+'getmode' returns the mode of a given column
+}
+\details{
+This function is used throughout the PKids Update Process.
 }

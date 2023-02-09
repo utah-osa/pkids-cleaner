@@ -7,6 +7,9 @@ summarize testing data for visualization}
 \usage{
 test_labels(sm)
 }
+\arguments{
+\item{sm}{The statewide merge dataframe for a given entity}
+}
 \description{
 CREATE TESTING LABELS ###
 summarize testing data for visualization

@@ -2,10 +2,13 @@
 % Please edit documentation in R/get_nomatch.R
 \name{get_nomatch}
 \alias{get_nomatch}
-\title{First: Create table from nomatch input df that is each check that needs to be done}
+\title{Get No Match}
 \usage{
 get_nomatch(missing)
 }
+\arguments{
+\item{missing}{A parameter}
+}
 \description{
-First: Create table from nomatch input df that is each check that needs to be done
+Get No Match
 }

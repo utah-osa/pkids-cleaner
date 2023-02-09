@@ -7,6 +7,9 @@ find the most frequent subject, course name, etc. per class id}
 \usage{
 class_labels(sm)
 }
+\arguments{
+\item{sm}{The statewide merge dataframe for a given entity}
+}
 \description{
 CREATE CLASS LABELS
 find the most frequent subject, course name, etc. per class id
