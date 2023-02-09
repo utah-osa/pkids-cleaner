@@ -5,7 +5,7 @@
 ##########################################################
 
 ##########################################################
-#'# MODE FUNCTION
+#'# Get Mode
 #'
 #'@description
 #''getmode' returns the mode of a given column
@@ -23,7 +23,7 @@ getmode <- function(v) {
 ##########################################################
 
 ##########################################################
-#'# WEEKDAYS FUNCTION
+#'# Weekdays
 #'
 #'@description
 #''weekday_cal' returns a calendar object
@@ -37,7 +37,7 @@ weekday_cal <- bizdays::create.calendar(name = "cal",weekdays=c("saturday","sund
 ##########################################################
 
 ##########################################################
-#'# NOT IN FUNCTION
+#'# Not in
 #'
 #'@description
 #' 'notin' returns values that are not in the given parameters
@@ -93,16 +93,16 @@ new_startend <- function(start, end, n, nth){
 ##########################################################
 
 ##########################################################
-#' CLENGTH RECALCUATION FOR DUPLICATE RECORDS FUNCTION
-#' returns: START_STUDENT/END_STUDENT - new start/end dates
-#'          CLENGTH_STUDENT - proportion of year spent in class
-#'          NOTINCLASS_STUDENT - proportion of year between the start/end dates not spent in class
+#' Class Length Recalculation
 #'
 #'@description
-#'clength_recalc' adjusts the length of a class
+#'clength_recalc' adjusts the length of a class for duplicated records
 #'
 #'@details
 #'This function is used in the Statewide Merge process.
+#'START_STUDENT/END_STUDENT - new start/end dates
+#'CLENGTH_STUDENT - proportion of year spent in class
+#'NOTINCLASS_STUDENT - proportion of year between the start/end dates not spent in class
 #'
 #'@param starts The column containing start dates
 #'@param ends The column containing end dates
@@ -178,7 +178,9 @@ clength_recalc <- function(starts, ends, clengths){
 
 #######################################################
 
-#' CREATE CLASS LABELS
+#' Create Class Labels
+#'
+#' @details
 #' find the most frequent subject, course name, etc. per class id
 #'
 #'@param sm The statewide merge dataframe for a given entity
@@ -200,7 +202,9 @@ class_labels <- function(sm){
 
 #######################################################
 
-#' CREATE STUDENT LABELS
+#' Create Student Labels
+#'
+#'@details
 #' find the most frequent school per student
 #'
 #'@param sm The statewide merge dataframe for a given entity
@@ -218,8 +222,10 @@ student_labels <- function(sm){
 
 #######################################################
 
-#' CREATE TESTING LABELS ###
-#' summarize testing data for visualization
+#' Create Testing Labels
+#'
+#'@details
+#' Summarize testing data for visualization
 #'
 #'@param sm The statewide merge dataframe for a given entity
 #'

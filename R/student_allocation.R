@@ -11,8 +11,6 @@
 #'
 #' @export
 pullMatrix <- function(lea) {
-  lea_ids %<>% filter(district_code == "lea")
-  source(paste0("C:/Users/sdutton/Desktop/SamR/testAllocSource_",lea,".R"))
+  source(paste0("H:/Economists/Ed/KIDS/All LEAs/Student Allocation Matrices/Allocation_Matrix_",lea,".R"))
   View(runMatrix)
  }
-

@@ -2,8 +2,7 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{test_labels}
 \alias{test_labels}
-\title{CREATE TESTING LABELS ###
-summarize testing data for visualization}
+\title{Create Testing Labels}
 \usage{
 test_labels(sm)
 }
@@ -11,6 +10,8 @@ test_labels(sm)
 \item{sm}{The statewide merge dataframe for a given entity}
 }
 \description{
-CREATE TESTING LABELS ###
-summarize testing data for visualization
+Create Testing Labels
+}
+\details{
+Summarize testing data for visualization
 }

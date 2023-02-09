@@ -2,10 +2,7 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{clength_recalc}
 \alias{clength_recalc}
-\title{CLENGTH RECALCUATION FOR DUPLICATE RECORDS FUNCTION
-returns: START_STUDENT/END_STUDENT - new start/end dates
-         CLENGTH_STUDENT - proportion of year spent in class
-         NOTINCLASS_STUDENT - proportion of year between the start/end dates not spent in class}
+\title{Class Length Recalculation}
 \usage{
 clength_recalc(starts, ends, clengths)
 }
@@ -17,8 +14,11 @@ clength_recalc(starts, ends, clengths)
 \item{clengths}{The column containing class lengths}
 }
 \description{
-clength_recalc' adjusts the length of a class
+clength_recalc' adjusts the length of a class for duplicated records
 }
 \details{
 This function is used in the Statewide Merge process.
+START_STUDENT/END_STUDENT - new start/end dates
+CLENGTH_STUDENT - proportion of year spent in class
+NOTINCLASS_STUDENT - proportion of year between the start/end dates not spent in class
 }
