@@ -9,9 +9,16 @@ returns: START_STUDENT/END_STUDENT - new start/end dates
 \usage{
 clength_recalc(starts, ends, clengths)
 }
+\arguments{
+\item{starts}{The column containing start dates}
+
+\item{ends}{The column containing end dates}
+
+\item{clengths}{The column containing class lengths}
+}
 \description{
-CLENGTH RECALCUATION FOR DUPLICATE RECORDS FUNCTION
-returns: START_STUDENT/END_STUDENT - new start/end dates
-         CLENGTH_STUDENT - proportion of year spent in class
-         NOTINCLASS_STUDENT - proportion of year between the start/end dates not spent in class
+clength_recalc' adjusts the length of a class
+}
+\details{
+This function is used in the Statewide Merge process.
 }

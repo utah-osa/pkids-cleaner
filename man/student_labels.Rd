@@ -7,6 +7,9 @@ find the most frequent school per student}
 \usage{
 student_labels(sm)
 }
+\arguments{
+\item{sm}{The statewide merge dataframe for a given entity}
+}
 \description{
 CREATE STUDENT LABELS
 find the most frequent school per student

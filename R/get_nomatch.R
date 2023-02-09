@@ -1,5 +1,10 @@
 ########################################
-#'First: Create table from nomatch input df that is each check that needs to be done
+#'Get No Match
+#'
+#'@Details
+#' Create table from nomatch input df that is each check that needs to be done
+#'
+#'@param missing A parameter
 #'
 #'@export
 get_nomatch <- function(missing){
@@ -10,6 +15,8 @@ get_nomatch <- function(missing){
 }
 
 #' Get Names
+#'
+#'@param names A parameter
 #'
 #'@export
 get_names <- function(names){

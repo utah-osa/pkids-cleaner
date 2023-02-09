@@ -3,22 +3,19 @@
 ##########################################################
 ############ Code Written by: Kaylee Hodgson #############
 ##########################################################
-#
-# # LOAD IN PACKAGES FOR FUNCTIONS
-#
-# require(tidyverse)
-# require(haven)
-# require(magrittr)
-# require(dplyr)
-# require(bizdays) # weekdays function
-# require(withr)
-# require(DescTools) # %overlaps% function https://rdrr.io/cran/DescTools/man/overlaps.html
 
 ##########################################################
 #'# MODE FUNCTION
 #'
+#'@description
+#''getmode' returns the mode of a given column
 #'
-#'@exports get_mode
+#'@details
+#'This function is used throughout the PKids Update Process.
+#'
+#'@param v The column in which we are obtaining a mode value
+#'
+#'@export
 getmode <- function(v) {
   uniqv <- unique(v)
   uniqv[which.max(tabulate(match(v, uniqv)))]
@@ -28,29 +25,65 @@ getmode <- function(v) {
 ##########################################################
 #'# WEEKDAYS FUNCTION
 #'
-#'@exports weekday_cal
+#'@description
+#''weekday_cal' returns a calendar object
+#'
+#'@details
+#'This function is used throughout the PKids Update Process.
+#'
+#'
+#'@export
 weekday_cal <- bizdays::create.calendar(name = "cal",weekdays=c("saturday","sunday"))
 ##########################################################
 
 ##########################################################
 #'# NOT IN FUNCTION
 #'
+#'@description
+#' 'notin' returns values that are not in the given parameters
+#'
+#'@details
+#'This function is used throughout the PKids Update Process. It functions opposite to %in%.
+#'
+#'@param x A parameter
+#'@param y A parameter
+#'
 #'@export
-'%!in%' <- function(x,y)!('%in%'(x,y))
+`%nin%` <- function(x,y)!('%in%'(x,y))
 ##########################################################
 
 ##########################################################
-#'# FUNCTION TO DEFINE THE SMALLEST TERM USED FOR A CLASS
-#'# RETURNS TRUE/FALSE LOGICAL STATEMENT
+#'Change Term
+#'
+#'@description
+#' changeterm' defines the smallest term used for a class
+#'
+#'@details
+#'This function returns a T/F logical statement and is used in the statwide merge process
+#'
+#'@param variable A variable
+#'@param overlap Another variable
+#'@param term.type A type of term
 #'
 #'@export
 changeterm <- function(variable,overlap,term.type){
-  any(unlist(variable) %in% term.type) & any(unlist(variable) %!in% term.type) & overlap=="NONE"
+  any(unlist(variable) %in% term.type) & any(unlist(variable) %nin% term.type) & overlap=="NONE"
 }
 ##########################################################
 
 ##########################################################
-#'# FUNCTION TO FIND NEW START AND END DATES FOR FILES THAT ARE DUPLICATED
+#' New Start/End
+#'
+#'@description
+#'new_startend' returns the new start and end dates for duplicated files
+#'
+#'@details
+#'This function is used in defining classes in the Statewide Merge process.
+#'
+#'@param start The start
+#'@param end The end
+#'@param n The n
+#'@param nth The nth
 #'
 #'@export
 new_startend <- function(start, end, n, nth){
@@ -64,6 +97,16 @@ new_startend <- function(start, end, n, nth){
 #' returns: START_STUDENT/END_STUDENT - new start/end dates
 #'          CLENGTH_STUDENT - proportion of year spent in class
 #'          NOTINCLASS_STUDENT - proportion of year between the start/end dates not spent in class
+#'
+#'@description
+#'clength_recalc' adjusts the length of a class
+#'
+#'@details
+#'This function is used in the Statewide Merge process.
+#'
+#'@param starts The column containing start dates
+#'@param ends The column containing end dates
+#'@param clengths The column containing class lengths
 #'
 #'@export
 clength_recalc <- function(starts, ends, clengths){
@@ -138,7 +181,9 @@ clength_recalc <- function(starts, ends, clengths){
 #' CREATE CLASS LABELS
 #' find the most frequent subject, course name, etc. per class id
 #'
-#' @exports
+#'@param sm The statewide merge dataframe for a given entity
+#'
+#'@export
 
 class_labels <- function(sm){
   sm %>%
@@ -158,7 +203,9 @@ class_labels <- function(sm){
 #' CREATE STUDENT LABELS
 #' find the most frequent school per student
 #'
-#' @exports
+#'@param sm The statewide merge dataframe for a given entity
+#'
+#'@export
 
 student_labels <- function(sm){
   sm %>%
@@ -174,7 +221,9 @@ student_labels <- function(sm){
 #' CREATE TESTING LABELS ###
 #' summarize testing data for visualization
 #'
-#' @exports
+#'@param sm The statewide merge dataframe for a given entity
+#'
+#'@export
 
 test_labels <- function(sm){
 

@@ -2,12 +2,20 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{changeterm}
 \alias{changeterm}
-\title{# FUNCTION TO DEFINE THE SMALLEST TERM USED FOR A CLASS
-# RETURNS TRUE/FALSE LOGICAL STATEMENT}
+\title{Change Term}
 \usage{
 changeterm(variable, overlap, term.type)
 }
+\arguments{
+\item{variable}{A variable}
+
+\item{overlap}{Another variable}
+
+\item{term.type}{A type of term}
+}
 \description{
-# FUNCTION TO DEFINE THE SMALLEST TERM USED FOR A CLASS
-# RETURNS TRUE/FALSE LOGICAL STATEMENT
+changeterm' defines the smallest term used for a class
+}
+\details{
+This function returns a T/F logical statement and is used in the statwide merge process
 }

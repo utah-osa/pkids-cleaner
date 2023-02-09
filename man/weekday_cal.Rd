@@ -11,6 +11,9 @@ An object of class \code{Calendar} of length 17.
 weekday_cal
 }
 \description{
-# WEEKDAYS FUNCTION
+'weekday_cal' returns a calendar object
+}
+\details{
+This function is used throughout the PKids Update Process.
 }
 \keyword{datasets}

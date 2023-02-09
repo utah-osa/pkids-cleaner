@@ -2,10 +2,20 @@
 % Please edit documentation in R/USBE_functions.R
 \name{sum_numvars}
 \alias{sum_numvars}
-\title{Describe Numeric Variables}
+\title{Sum of Numeric Variables}
 \usage{
 sum_numvars(old_file, new_file, funct = mean)
 }
+\arguments{
+\item{old_file}{The file from the previous year}
+
+\item{new_file}{The file from the current year}
+
+\item{funct}{The summary function to use, default is mean}
+}
 \description{
+Sum of Numeric Variables
+}
+\details{
 check summary statistics of numeric variables
 }
