@@ -1,0 +1,37 @@
+{
+    "dialog-state": {
+        "query": "function",
+        "path": "H:/Economists/Ed/KIDS",
+        "regex": false,
+        "caseSensitive": false,
+        "wholeWord": false,
+        "filePatterns": [
+            "*.r",
+            "*.R",
+            "*.rnw",
+            "*.Rnw",
+            "*.rmd",
+            "*.Rmd",
+            "*.rmarkdown",
+            "*.Rmarkdown",
+            "*.qmd",
+            "*.Qmd",
+            "*.md",
+            "*.rhtml",
+            "*.Rhtml",
+            "*.h",
+            "*.hpp",
+            "*.c",
+            "*.cpp",
+            "*.js",
+            "*.yml",
+            "*.yaml"
+        ],
+        "useGitGrep": false,
+        "excludeGitIgnore": true,
+        "excludeFilePatterns": [],
+        "resultsCount": 0,
+        "errorCount": 0,
+        "replaceErrors": ""
+    }
+}

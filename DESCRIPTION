@@ -1,0 +1,22 @@
+Package: pkids
+Type: Package
+Title: Helper Functions for Project KIDS
+Version: 0.0.1
+Author: Sam Dutton
+Maintainer: Sam Dutton <sdutton@utah.gov>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr,
+         magrittr,
+         haven,
+         bizdays,
+         withr,
+         DescTools
+Depends: magrittr
+RoxygenNote: 7.2.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
