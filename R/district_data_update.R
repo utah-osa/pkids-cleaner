@@ -1,5 +1,5 @@
 ################
-#' function to update data
+#' Rerun Scripts
 #'
 #' @export
 #

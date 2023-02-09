@@ -2,8 +2,7 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{student_labels}
 \alias{student_labels}
-\title{CREATE STUDENT LABELS
-find the most frequent school per student}
+\title{Create Student Labels}
 \usage{
 student_labels(sm)
 }
@@ -11,6 +10,8 @@ student_labels(sm)
 \item{sm}{The statewide merge dataframe for a given entity}
 }
 \description{
-CREATE STUDENT LABELS
+Create Student Labels
+}
+\details{
 find the most frequent school per student
 }

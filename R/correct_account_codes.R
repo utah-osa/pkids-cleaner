@@ -1,5 +1,5 @@
 ##########################################################
-#' CORRECT_ACCOUNT_CODES FUNCTION
+#' Correct Account Codes
 #'
 #' @export
 # correct_account_codes <- function(expense, lea){

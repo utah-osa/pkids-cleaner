@@ -1,7 +1,7 @@
 ########################################
 #'Get No Match
 #'
-#'@Details
+#'@details
 #' Create table from nomatch input df that is each check that needs to be done
 #'
 #'@param missing A parameter

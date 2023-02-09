@@ -2,8 +2,7 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{class_labels}
 \alias{class_labels}
-\title{CREATE CLASS LABELS
-find the most frequent subject, course name, etc. per class id}
+\title{Create Class Labels}
 \usage{
 class_labels(sm)
 }
@@ -11,6 +10,8 @@ class_labels(sm)
 \item{sm}{The statewide merge dataframe for a given entity}
 }
 \description{
-CREATE CLASS LABELS
+Create Class Labels
+}
+\details{
 find the most frequent subject, course name, etc. per class id
 }

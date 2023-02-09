@@ -12,3 +12,6 @@ get_nomatch(missing)
 \description{
 Get No Match
 }
+\details{
+Create table from nomatch input df that is each check that needs to be done
+}

@@ -1,5 +1,5 @@
 ##########################################################
-#' CORRECT_FISCAL_YEARS FUNCTION
+#' Correct Fiscal Years
 #'
 #' @export
 #
