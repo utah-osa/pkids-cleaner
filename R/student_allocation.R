@@ -1,5 +1,5 @@
 ################################################################################
-#' Pull Student Allocation Matrix
+#'Pull Student Allocation Matrix
 #'
 #' @description
 #' For use in Student Allocation
@@ -12,5 +12,4 @@
 #' @export
 pullMatrix <- function(lea) {
   source(paste0("H:/Economists/Ed/KIDS/All LEAs/Student Allocation Matrices/Allocation_Matrix_",lea,".R"))
-  View(runMatrix)
  }
