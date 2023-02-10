@@ -5,7 +5,7 @@
 ##########################################################
 
 ##########################################################
-#'# Get Mode
+#'Get Mode
 #'
 #'@description
 #''getmode' returns the mode of a given column
@@ -23,7 +23,7 @@ getmode <- function(v) {
 ##########################################################
 
 ##########################################################
-#'# Weekdays
+#'Weekdays
 #'
 #'@description
 #''weekday_cal' returns a calendar object
@@ -37,7 +37,7 @@ weekday_cal <- bizdays::create.calendar(name = "cal",weekdays=c("saturday","sund
 ##########################################################
 
 ##########################################################
-#'# Not in
+#'Not in
 #'
 #'@description
 #' 'notin' returns values that are not in the given parameters
@@ -72,7 +72,7 @@ changeterm <- function(variable,overlap,term.type){
 ##########################################################
 
 ##########################################################
-#' New Start/End
+#'New Start/End
 #'
 #'@description
 #'new_startend' returns the new start and end dates for duplicated files
@@ -93,7 +93,7 @@ new_startend <- function(start, end, n, nth){
 ##########################################################
 
 ##########################################################
-#' Class Length Recalculation
+#'Class Length Recalculation
 #'
 #'@description
 #'clength_recalc' adjusts the length of a class for duplicated records
@@ -202,7 +202,7 @@ class_labels <- function(sm){
 
 #######################################################
 
-#' Create Student Labels
+#'Create Student Labels
 #'
 #'@details
 #' find the most frequent school per student
