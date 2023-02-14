@@ -2,7 +2,7 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{\%nin\%}
 \alias{\%nin\%}
-\title{# Not in}
+\title{Not in}
 \usage{
 x \%nin\% y
 }

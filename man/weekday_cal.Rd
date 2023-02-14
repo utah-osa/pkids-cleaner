@@ -3,7 +3,7 @@
 \docType{data}
 \name{weekday_cal}
 \alias{weekday_cal}
-\title{# Weekdays}
+\title{Weekdays}
 \format{
 An object of class \code{Calendar} of length 17.
 }
