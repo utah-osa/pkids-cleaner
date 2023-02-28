@@ -8,6 +8,9 @@ A data frame with 41 rows and 14 columns}
 \format{
 ## `lea_ids`
 }
+\source{
+H:/Economists/Ed/KIDS/All LEAs/District IDs Master.csv
+}
 \usage{
 lea_ids
 }
