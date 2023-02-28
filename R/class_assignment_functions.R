@@ -212,12 +212,20 @@ class_labels <- function(sm){
 #'@export
 
 student_labels <- function(sm){
-  sm %>%
-    group_by(STUDENT_ID, SCHOOL_YEAR, DISTRICT_ID) %>%
-    mutate(school_number_mode_s = getmode(SCHOOL_NUMBER),
-           school_name_mode_s = getmode(SCHOOL),
-           school_type_mode_s = getmode(SCHOOL_TYPE)) %>%
-    ungroup()
+  if("SCHOOL_TYPE" %in% colnames(sm)){
+    sm %>%
+      group_by(STUDENT_ID, SCHOOL_YEAR) %>%
+      mutate(school_number_mode_s = getmode(SCHOOL_NUMBER),
+             school_name_mode_s = getmode(SCHOOL),
+             school_type_mode_s = getmode(SCHOOL_TYPE)) %>%
+      ungroup()
+  } else {
+    sm %>%
+      group_by(STUDENT_ID, SCHOOL_YEAR) %>%
+      mutate(school_number_mode_s = getmode(SCHOOL_NUMBER),
+             school_name_mode_s = getmode(SCHOOL)) %>%
+      ungroup()
+  }
 }
 
 #######################################################

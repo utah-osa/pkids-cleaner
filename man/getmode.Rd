@@ -2,7 +2,7 @@
 % Please edit documentation in R/class_assignment_functions.R
 \name{getmode}
 \alias{getmode}
-\title{# Get Mode}
+\title{Get Mode}
 \usage{
 getmode(v)
 }
