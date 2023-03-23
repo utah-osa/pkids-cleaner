@@ -90,10 +90,12 @@ check3b <- function(expense, allocation){
 #' @details
 #' In an effort to expedite database checks, we run this script to systematically run the databse checks for each charter school and spit out the results This will mirror the results we find in the online database checks, but saves us the trouble of having to reupload the files to the cloud.
 #'
+#' @param version The specific version of the database folder we're in
+#'
 #' @export
 
 ## Complete charter check file
-charter_final_database_checks <- function(){
+charter_final_database_checks <- function(version){
   charter_ids <- read_csv("H:/Economists/Ed/KIDS/All Charter Schools/All/Charter IDs Master.csv")
   closed <- c("ALIA","AMIN","ARST","CAPC","KAIR","PION")
   charter_ids %<>% filter(!lea_acronym %in% c(closed))
@@ -133,11 +135,11 @@ charter_final_database_checks <- function(){
 #'
 #' @details
 #' In an effort to expedite database checks, we run this script to systematically run the databse checks for each district and spit out the results This will mirror the results we find in the online database checks, but saves us the trouble of having to reupload the files to the cloud.
-#'
+#' @param version The specific version of the database folder we're in
 #' @export
 
 ## Complete district check files
-district_final_database_checks <- function(){
+district_final_database_checks <- function(version){
   lea_ids <- read_csv("H:/Economists/Ed/KIDS/All LEAs/District IDs Master.csv", col_types = cols())
   lea_ids <- lea_ids[c(2,4,6),]
 
