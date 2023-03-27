@@ -258,7 +258,7 @@ charter_expense_columns <- function(version){
   for(i in  1:nrow(charters)){
     try(x <- ncol(fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/expense/z_",charters$lea_acronym[i],"_expense.txt"), nrow = 0)))
     if(exists("x")){
-      data_tibble <- as.data.frame(name = charters$lea_name[i],
+      data_tibble <- data.frame(name = charters$lea_name[i],
                                 number = x)
     }
     try(master_data %<>% rbind(data_tibble))
