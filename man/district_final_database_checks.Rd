@@ -2,7 +2,7 @@
 % Please edit documentation in R/database_checks.R
 \name{district_final_database_checks}
 \alias{district_final_database_checks}
-\title{Database District Check Variables}
+\title{Database District Check}
 \usage{
 district_final_database_checks(version)
 }

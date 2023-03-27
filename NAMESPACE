@@ -1,5 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 import(dplyr)
+importFrom(stringr, "str_detect")
 importFrom(magrittr,"%>%")
 importFrom(magrittr,"%<>%")
 importFrom(scales, "label_percent")

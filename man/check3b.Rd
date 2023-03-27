@@ -2,7 +2,7 @@
 % Please edit documentation in R/database_checks.R
 \name{check3b}
 \alias{check3b}
-\title{Database Check 3a Variables}
+\title{Database Check 3b}
 \usage{
 check3b(expense, allocation)
 }

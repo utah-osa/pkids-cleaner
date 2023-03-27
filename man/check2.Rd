@@ -2,7 +2,7 @@
 % Please edit documentation in R/database_checks.R
 \name{check2}
 \alias{check2}
-\title{Database Check 2 Variables}
+\title{Database Check 2}
 \usage{
 check2(expense)
 }
