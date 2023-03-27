@@ -326,6 +326,9 @@ district_expense_columns <- function(version){
     }
     try(master_data %<>% rbind(data_tibble))
     print(districts$entity_name[i])
+
+
+
     rm(i)
   }
   print(master_data %>% filter(number != 40))
