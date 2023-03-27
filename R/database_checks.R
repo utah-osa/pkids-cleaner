@@ -268,7 +268,7 @@ charter_expense_columns <- function(version){
 }
 
 ################################################################################
-#' Confirm column numbers
+#' Confirm column numbers - charter allocation
 #'
 #' @description
 #' 'charter_allocation_columns' helps us see if files have the correct number of columns.
@@ -289,7 +289,7 @@ charter_allocation_columns <- function(version){
   for(i in  1:nrow(charters)){
     try(x <- ncol(fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/allocation/z_",charters$lea_acronym[i],"_class.txt"), nrow = 0)))
     if(exists("x")){
-      data_tibble <- as.data.frame(name = charters$lea_name[i],
+      data_tibble <- data.frame(name = charters$lea_name[i],
                                 number = x)
     }
     try(master_data_class %<>% rbind(data_tibble))
@@ -318,7 +318,7 @@ district_expense_columns <- function(version){
   for(i in  1:nrow(districts)){
     try(x <- ncol(fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/expense/",districts$district_code[i],"_expense.txt"), nrow = 0)))
     if(exists("x")){
-      data_tibble <- as.data.frame(name = districts$entity_name[i],
+      data_tibble <- data.frame(name = districts$entity_name[i],
                                 number = x)
     }
     try(master_data %<>% rbind(data_tibble))
@@ -338,7 +338,7 @@ district_expense_columns <- function(version){
 #' @param version This tells us which folder to pull from
 #' @export
 
-# District Allocation
+## District Allocation
 district_allocation_columns <- function(version){
   districts <- read_csv("H:/Economists/Ed/KIDS/All LEAs/District IDs Master.csv") %>%
     mutate(district_code = tolower(district_code))
@@ -346,7 +346,7 @@ district_allocation_columns <- function(version){
   for(i in  1:nrow(districts)){
     try(x <- ncol(fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/allocation/",districts$district_code[i],"_class.txt"), nrow = 0)))
     if(exists("x")){
-      data_tibble <- as.data.frame(name = districts$entity_name[i],
+      data_tibble <- data.frame(name = districts$entity_name[i],
                                 number = x)
     }
     try(master_data_class %<>% rbind(data_tibble))
