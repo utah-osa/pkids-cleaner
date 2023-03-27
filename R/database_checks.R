@@ -268,7 +268,7 @@ charter_expense_columns <- function(version){
 }
 
 ################################################################################
-#' Confirm column numbers charter allocation
+#' Confirm column numbers - charter allocation
 #'
 #' @description
 #' 'charter_allocation_columns' helps us see if files have the correct number of columns.
