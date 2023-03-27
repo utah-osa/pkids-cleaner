@@ -262,6 +262,8 @@ charter_expense_columns <- function(version){
                                 number = x)
     }
     try(master_data %<>% rbind(data_tibble))
+    print(charters$lea_name[i])
+
     rm(i)
   }
   print(master_data %>% filter(number != 40))
@@ -293,6 +295,7 @@ charter_allocation_columns <- function(version){
                                 number = x)
     }
     try(master_data_class %<>% rbind(data_tibble))
+    print(charters$lea_name[i])
 
   }
   print(master_data_class %>% filter(number != 374))}
@@ -322,6 +325,7 @@ district_expense_columns <- function(version){
                                 number = x)
     }
     try(master_data %<>% rbind(data_tibble))
+    print(districts$entity_name[i])
     rm(i)
   }
   print(master_data %>% filter(number != 40))
@@ -350,6 +354,8 @@ district_allocation_columns <- function(version){
                                 number = x)
     }
     try(master_data_class %<>% rbind(data_tibble))
+    print(districts$entity_name[i])
+
     rm(i)
   }
   print(master_data_class %>% filter(number != 374))}
