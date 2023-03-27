@@ -2,7 +2,7 @@
 % Please edit documentation in R/database_checks.R
 \name{charter_final_database_checks}
 \alias{charter_final_database_checks}
-\title{Database Charter Check Variables}
+\title{Database Charter Check}
 \usage{
 charter_final_database_checks(version)
 }
@@ -10,7 +10,7 @@ charter_final_database_checks(version)
 \item{version}{This tells us which folder we need to pull the data from}
 }
 \description{
-Database Charter Check Variables
+Database Charter Check
 }
 \details{
 In an effort to expedite database checks, we run this script to systematically run the databse checks for each charter school and spit out the results This will mirror the results we find in the online database checks, but saves us the trouble of having to reupload the files to the cloud.
