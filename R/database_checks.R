@@ -268,7 +268,7 @@ charter_expense_columns <- function(version){
 }
 
 ################################################################################
-#' Confirm column numbers
+#' Confirm column numbers charter allocation
 #'
 #' @description
 #' 'charter_allocation_columns' helps us see if files have the correct number of columns.
@@ -338,7 +338,7 @@ district_expense_columns <- function(version){
 #' @param version This tells us which folder to pull from
 #' @export
 
-# District Allocation
+## District Allocation
 district_allocation_columns <- function(version){
   districts <- read_csv("H:/Economists/Ed/KIDS/All LEAs/District IDs Master.csv") %>%
     mutate(district_code = tolower(district_code))
