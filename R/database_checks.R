@@ -508,7 +508,6 @@ charter_final_database_checks <- function(version){
 ## Complete district check files
 district_final_database_checks <- function(version){
   lea_ids <- read_csv("H:/Economists/Ed/KIDS/All LEAs/District IDs Master.csv", col_types = cols())
-  lea_ids <- lea_ids[c(2,4,6),]
 
   dfchecks <- NULL
   district_check_file <- NULL
