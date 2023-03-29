@@ -524,7 +524,6 @@ district_final_database_checks <- function(version){
                             "check3a" = check3a(expense, allocation),
                             "check3b" = check3b(expense, allocation),
                             "district" = i_id$district_code)
-    lea_check %<>% as_tibble(lea_check)
 
     dfchecks %<>% rbind(lea_check)
     district_check_file <<- dfchecks
