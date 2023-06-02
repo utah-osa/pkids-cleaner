@@ -7,7 +7,7 @@
 test_labels(sm)
 }
 \arguments{
-\item{sm}{The statewide merge dataframe for a given entity}
+\item{sm}{The statewide merge data frame for a given entity}
 }
 \description{
 Create Testing Labels

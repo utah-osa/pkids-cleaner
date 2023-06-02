@@ -15,5 +15,5 @@ x \%nin\% y
 'notin' returns values that are not in the given parameters
 }
 \details{
-This function is used throughout the PKids Update Process. It functions opposite to %in%.
+This function is used throughout the PKids Update Process. It functions opposite to %in% and is equivalent to the function %nin% found in the hmisc package.
 }

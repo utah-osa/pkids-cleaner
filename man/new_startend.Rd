@@ -19,5 +19,5 @@ new_startend(start, end, n, nth)
 new_startend' returns the new start and end dates for duplicated files
 }
 \details{
-This function is used in defining classes in the Statewide Merge process.
+This function is used in defining classes in the class assignment process.
 }

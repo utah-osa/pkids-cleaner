@@ -7,11 +7,11 @@
 class_labels(sm)
 }
 \arguments{
-\item{sm}{The statewide merge dataframe for a given entity}
+\item{sm}{The statewide merge data frame for a given entity}
 }
 \description{
 Create Class Labels
 }
 \details{
-find the most frequent subject, course name, etc. per class id
+Find the most frequent subject, course name, etc. per class id
 }

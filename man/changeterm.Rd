@@ -17,5 +17,5 @@ changeterm(variable, overlap, term.type)
 changeterm' defines the smallest term used for a class
 }
 \details{
-This function returns a T/F logical statement and is used in the statwide merge process
+This function returns a T/F logical statement and is used in the class assignment process
 }
