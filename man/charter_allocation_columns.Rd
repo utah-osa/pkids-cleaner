@@ -2,7 +2,7 @@
 % Please edit documentation in R/database_checks.R
 \name{charter_allocation_columns}
 \alias{charter_allocation_columns}
-\title{Confirm column numbers}
+\title{Confirm column numbers - charter allocation}
 \usage{
 charter_allocation_columns(version)
 }

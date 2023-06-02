@@ -13,13 +13,20 @@
 #'@details
 #'This function returns the mode value for a given column
 #'
-#'@param v The column in which we are obtaining a mode value
+#'@param v The column for which we are obtaining a mode value
+#'@param na.omit Should NA values be excluded? Default is na.omit = T
 #'
 #'@export
-getmode <- function(v) {
-  uniqv <- unique(v)
-  uniqv[which.max(tabulate(match(v, uniqv)))]
-}
+getmode <- function(v, na.omit = T) {
+  if(na.omit == T){
+    v <- v[!is.na(v)]
+    uniqv <- unique(v)
+    uniqv[which.max(tabulate(match(v, uniqv)))]
+  } else {
+    uniqv <- unique(v)
+    uniqv[which.max(tabulate(match(v, uniqv)))]
+  }
+  }
 ##########################################################
 
 ##########################################################

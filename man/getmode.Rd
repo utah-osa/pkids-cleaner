@@ -4,14 +4,16 @@
 \alias{getmode}
 \title{Get Mode}
 \usage{
-getmode(v)
+getmode(v, na.omit = T)
 }
 \arguments{
-\item{v}{The column in which we are obtaining a mode value}
+\item{v}{The column for which we are obtaining a mode value}
+
+\item{na.omit}{Should NA values be excluded? Default is na.omit = T}
 }
 \description{
 'getmode' returns the mode of a given column
 }
 \details{
-This function is used throughout the PKids Update Process.
+This function returns the mode value for a given column
 }

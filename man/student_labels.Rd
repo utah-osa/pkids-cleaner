@@ -7,11 +7,11 @@
 student_labels(sm)
 }
 \arguments{
-\item{sm}{The statewide merge dataframe for a given entity}
+\item{sm}{The statewide merge data frame for a given entity}
 }
 \description{
 Create Student Labels
 }
 \details{
-find the most frequent school per student
+Find the most frequent school per student
 }

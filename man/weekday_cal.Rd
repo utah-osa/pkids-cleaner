@@ -14,6 +14,6 @@ weekday_cal
 'weekday_cal' returns a calendar object
 }
 \details{
-This function is used throughout the PKids Update Process.
+This calendar is used primarily in the class assignment process when calculating the length of a school year and class length
 }
 \keyword{datasets}
