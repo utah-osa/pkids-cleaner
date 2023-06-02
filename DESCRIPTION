@@ -4,8 +4,9 @@ Title: Helper Functions for Project KIDS
 Version: 0.0.1
 Author: Sam Dutton
 Maintainer: Sam Dutton <sdutton@utah.gov>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: The pkids package contains helper functions for the yearly updates process. 
+See the Internal Technical Manual for guides to each step of the process and for maintenance 
+of this package.
 License: Unlimited
 Encoding: UTF-8
 LazyData: true
@@ -14,6 +15,7 @@ Imports: dplyr,
          haven,
          bizdays,
          withr,
+
          DescTools,
          usethis,
          scales,
