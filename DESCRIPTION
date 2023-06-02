@@ -15,7 +15,11 @@ Imports: dplyr,
          haven,
          bizdays,
          withr,
-         DescTools
+
+         DescTools,
+         usethis,
+         scales,
+         stringr
 RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
