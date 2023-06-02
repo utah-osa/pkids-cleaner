@@ -11,7 +11,7 @@
 #''getmode' returns the mode of a given column
 #'
 #'@details
-#'This function is used throughout the PKids Update Process.
+#'This function returns the mode value for a given column
 #'
 #'@param v The column in which we are obtaining a mode value
 #'
@@ -29,7 +29,7 @@ getmode <- function(v) {
 #''weekday_cal' returns a calendar object
 #'
 #'@details
-#'This function is used throughout the PKids Update Process.
+#'This calendar is used primarily in the class assignment process when calculating the length of a school year and class length
 #'
 #'
 #'@export
@@ -43,7 +43,7 @@ weekday_cal <- bizdays::create.calendar(name = "cal",weekdays=c("saturday","sund
 #' 'notin' returns values that are not in the given parameters
 #'
 #'@details
-#'This function is used throughout the PKids Update Process. It functions opposite to %in%.
+#'This function is used throughout the PKids Update Process. It functions opposite to %in% and is equivalent to the function %nin% found in the hmisc package.
 #'
 #'@param x A parameter
 #'@param y A parameter
@@ -59,7 +59,7 @@ weekday_cal <- bizdays::create.calendar(name = "cal",weekdays=c("saturday","sund
 #' changeterm' defines the smallest term used for a class
 #'
 #'@details
-#'This function returns a T/F logical statement and is used in the statwide merge process
+#'This function returns a T/F logical statement and is used in the class assignment process
 #'
 #'@param variable A variable
 #'@param overlap Another variable
@@ -78,7 +78,7 @@ changeterm <- function(variable,overlap,term.type){
 #'new_startend' returns the new start and end dates for duplicated files
 #'
 #'@details
-#'This function is used in defining classes in the Statewide Merge process.
+#'This function is used in defining classes in the class assignment process.
 #'
 #'@param start The start
 #'@param end The end
@@ -180,10 +180,10 @@ clength_recalc <- function(starts, ends, clengths){
 
 #' Create Class Labels
 #'
-#' @details
-#' find the most frequent subject, course name, etc. per class id
+#'@details
+#'Find the most frequent subject, course name, etc. per class id
 #'
-#'@param sm The statewide merge dataframe for a given entity
+#'@param sm The statewide merge data frame for a given entity
 #'
 #'@export
 
@@ -205,9 +205,9 @@ class_labels <- function(sm){
 #'Create Student Labels
 #'
 #'@details
-#' find the most frequent school per student
+#'Find the most frequent school per student
 #'
-#'@param sm The statewide merge dataframe for a given entity
+#'@param sm The statewide merge data frame for a given entity
 #'
 #'@export
 
@@ -233,9 +233,9 @@ student_labels <- function(sm){
 #' Create Testing Labels
 #'
 #'@details
-#' Summarize testing data for visualization
+#'Summarize testing data for visualization
 #'
-#'@param sm The statewide merge dataframe for a given entity
+#'@param sm The statewide merge data frame for a given entity
 #'
 #'@export
 
@@ -258,9 +258,9 @@ test_labels <- function(sm){
               mean_l = (round(mean(LP_YN, na.rm=TRUE), digits=2))*100,
               mean_s = (round(mean(SP_YN, na.rm=TRUE), digits=2))*100,
               mean_m = (round(mean(MP_YN, na.rm=TRUE), digits=2))*100) %>%
-    mutate(mean_l = if_else(!is.nan(mean_l), mean_l, NULL),
-           mean_s = if_else(!is.nan(mean_s), mean_s, NULL),
-           mean_m = if_else(!is.nan(mean_m), mean_m, NULL)) %>%
+    mutate(mean_l = if_else(!is.nan(mean_l), mean_l, NA),
+           mean_s = if_else(!is.nan(mean_s), mean_s, NA),
+           mean_m = if_else(!is.nan(mean_m), mean_m, NA)) %>%
     mutate(lab_mean_l = if_else(nmiss_l>n_l,"Insufficient Data",paste(mean_l,"%", sep=" "))) %>%
     mutate(lab_mean_s = if_else(nmiss_s>n_s,"Insufficient Data",paste(mean_s,"%", sep=" "))) %>%
     mutate(lab_mean_m = if_else(nmiss_m>n_m,"Insufficient Data",paste(mean_m,"%", sep=" ")))
