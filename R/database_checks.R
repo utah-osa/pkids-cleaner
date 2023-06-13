@@ -513,22 +513,23 @@ district_final_database_checks <- function(version){
   district_check_file <- NULL
   for(i in 1:nrow(lea_ids)){
     i_id <- lea_ids[i,] %>% mutate(district_code = tolower(district_code))
-    allocation <- fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/allocation/",i_id$district_code, "_class.txt"),
-                        select = c(183:374,169))
-    expense <- fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/expense/",i_id$district_code, "_expense.txt"),
+    try(allocation <- fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/allocation/",i_id$district_code, "_class.txt"),
+                        select = c(183:374,169)))
+    try(expense <- fread(paste0("H:/Economists/Ed/KIDS/All LEAs/Database/exports_",version,"/expense/",i_id$district_code, "_expense.txt"),
                      select = c("lea_code", "fiscal_year", "total", "u_location","u_fund","u_function",
-                                "Expense_Category", "u_program", "u_object", "subcode"))
+                                "Expense_Category", "u_program", "u_object", "subcode")))
 
-    lea_check <- data.frame("check1" = check1(expense),
+    try(lea_check <- data.frame("check1" = check1(expense),
                             "check2" = check2(expense),
                             "check3a" = check3a(expense, allocation),
                             "check3b" = check3b(expense, allocation),
-                            "district" = i_id$district_code)
+                            "district" = i_id$district_code))
 
-    dfchecks %<>% rbind(lea_check)
+    try(dfchecks %<>% rbind(lea_check))
     district_check_file <<- dfchecks
     print(paste0("You are ", scales::label_percent()(i/nrow(lea_ids))," complete"))
     print(paste0(lea_ids$entity_name[i]," is done. Number remaining: ",nrow(lea_ids) - i))
+    rm(lea_check, i_id, allocation, expense)
 
   }
 }
