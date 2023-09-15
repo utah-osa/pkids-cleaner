@@ -417,7 +417,7 @@ check2 <- function(expense){
 #' Database Check 3a
 #'
 #' @description
-#' 'check3a' allows us to run the third database check for charters and districts
+#' 'check3a' allows us to run database check 3a for charters and districts.This check ensures that the sum of the subcodes is equal to the sum of the expense total. Small variations under $20 are acceptable, but larger variations should be investigated.
 #'
 #' @details
 #' This function is used in the charter and district database checks to confirm that total expense is the same across expense and allocation files.
@@ -433,7 +433,7 @@ check3a <- function(expense, allocation){
 #' Database Check 3b
 #'
 #' @description
-#' 'check3b' allows us to run the first database check for charters and districts
+#' 'check3b' allows us to run database check 3b for charters and districts. This check ensures that the sum of teacher pay in the allocation file is the same as the sum of teacher pay in the expense file. Variations under $20 are acceptable, but higher differences should be investigated.
 #'
 #' @details
 #' This function is used in the charter and district database checks to confirm that teacher pay is the same across expense and allocation files.
@@ -453,7 +453,7 @@ check3b <- function(expense, allocation){
 #' 'charter_final_database_checks' allows us to run all of the database checks for all charter schools.
 #'
 #' @details
-#' In an effort to expedite database checks, we run this script to systematically run the databse checks for each charter school and spit out the results This will mirror the results we find in the online database checks, but saves us the trouble of having to reupload the files to the cloud.
+#' In an effort to expedite database checks, we run this script to systematically run the database checks for each charter school and spit out the results This will mirror the results we find in the online database checks, but saves us the trouble of having to reupload the files to the cloud.
 #'
 #' @param version This tells us which folder we need to pull the data from
 #'
@@ -533,4 +533,4 @@ district_final_database_checks <- function(version){
   }
 }
 
-usethis::use_data_raw()
+#usethis::use_data_raw()

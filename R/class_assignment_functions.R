@@ -250,27 +250,36 @@ test_labels <- function(sm){
 
   tests <- sm %>%
     group_by(CLASS_ID) %>%
+              # n_* gives us a count of students who did take the proficiency tests
     summarise(n_l = sum(!is.na(LP_YN)),
               n_s = sum(!is.na(SP_YN)),
               n_m = sum(!is.na(MP_YN)),
               # n_rw = sum(!is.na(RWP_YN)),
               # n_t = sum(!is.na(TP_YN)),
               # n_e = sum(!is.na(EP_YN)),
+
+              # nmiss_* gives us a count of students who did not have scores for the proficiency tests
               nmiss_l = sum(is.na(LP_YN)),
               nmiss_s = sum(is.na(SP_YN)),
               nmiss_m = sum(is.na(MP_YN)),
               # nmiss_rw = sum(is.na(RWP_YN)),
               # nmiss_t = sum(is.na(TP_YN)),
               # nmiss_e = sum(is.na(EP_YN)),
+
+              # mean_* gives us the average proficiency score for each class
               mean_l = (round(mean(LP_YN, na.rm=TRUE), digits=2))*100,
               mean_s = (round(mean(SP_YN, na.rm=TRUE), digits=2))*100,
               mean_m = (round(mean(MP_YN, na.rm=TRUE), digits=2))*100) %>%
+
+           # change any NaN to NA
     mutate(mean_l = if_else(!is.nan(mean_l), mean_l, NA),
            mean_s = if_else(!is.nan(mean_s), mean_s, NA),
            mean_m = if_else(!is.nan(mean_m), mean_m, NA)) %>%
-    mutate(lab_mean_l = if_else(nmiss_l>n_l,"Insufficient Data",paste(mean_l,"%", sep=" "))) %>%
-    mutate(lab_mean_s = if_else(nmiss_s>n_s,"Insufficient Data",paste(mean_s,"%", sep=" "))) %>%
-    mutate(lab_mean_m = if_else(nmiss_m>n_m,"Insufficient Data",paste(mean_m,"%", sep=" ")))
+
+           # if the count of students without scores is greater than the count of students with scores, mask
+    mutate(lab_mean_l = if_else(nmiss_l>n_l,"Insufficient Data",paste(mean_l,"%", sep=" ")),
+           lab_mean_s = if_else(nmiss_s>n_s,"Insufficient Data",paste(mean_s,"%", sep=" ")),
+           lab_mean_m = if_else(nmiss_m>n_m,"Insufficient Data",paste(mean_m,"%", sep=" ")))
 
   # merge into statewide merge file
   sm %<>% left_join(tests, by = c("CLASS_ID"))

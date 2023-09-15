@@ -48,6 +48,7 @@ check_vars <- function(old_file, new_file){
 #'
 #' @param old_file The file from the previous year
 #' @param new_file The file from the current year
+#'
 #' @export
 which_vars <- function(old_file, new_file){
 
