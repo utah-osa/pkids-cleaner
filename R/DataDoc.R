@@ -20,5 +20,7 @@
 #'@source H:/Economists/Ed/KIDS/All Charter Schools/All/Charter IDs Master.csv
 "charter_ids"
 
-
+# For use in updating files:
+# charter_ids <- read.csv("H:/Economists/Ed/KIDS/All Charter Schools/All/Charter IDs Master.csv")
+# save(charter_ids, file="data/charter_ids.rda", version = 2)
 
